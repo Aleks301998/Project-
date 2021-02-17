@@ -77,6 +77,7 @@ public class User extends AbstractNamedEntity {
         return password;
     }
 
+
     @Override
     public String toString() {
         return "User (" +
@@ -87,5 +88,10 @@ public class User extends AbstractNamedEntity {
                 ", roles=" + roles +
                 ", caloriesPerDay=" + caloriesPerDay +
                 ')';
+    }
+
+    @Override
+    public boolean remove(int id) {
+        return remove(id);
     }
 }
