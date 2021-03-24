@@ -3,6 +3,7 @@ package ru.javawebinar.topjava;
 import org.springframework.util.ClassUtils;
 
 public class Profiles {
+
     public static final String
             JDBC = "jdbc",
             JPA = "jpa",

@@ -24,9 +24,9 @@ public class JspMealController extends UserMealController {
     }
 
     @RequestMapping(method = RequestMethod.GET)
-    public String mealList(Model model) {
-        model.addAttribute("mealList", super.getAll());
-        return "mealList";
+    public String meals(Model model) {
+        model.addAttribute("meals", super.getAll());
+        return "meals";
     }
 
     @RequestMapping(value = "/delete", method = RequestMethod.GET)
@@ -43,8 +43,8 @@ public class JspMealController extends UserMealController {
 
     @RequestMapping(value = "/create", method = RequestMethod.GET)
     public String created(Model model) {
-        model.addAttribute("meal", new Meal(LocalDateTime.now(), "", 1000));
-        return "meal";
+        model.addAttribute("meals", new Meal(LocalDateTime.now(), "", 1000));
+        return "meals";
     }
 
     @RequestMapping(method = RequestMethod.POST)
